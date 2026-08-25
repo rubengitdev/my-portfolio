@@ -47,7 +47,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                             <li>
                                 <button
                                     onClick={() => onNavigate('hero')}
-                                    className="hover:text-indigo-400 transition-colors"
+                                    className="hover:text-indigo-400 transition-colors cursor-pointer"
                                 >
                                     About
                                 </button>
@@ -55,7 +55,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                             <li>
                                 <button
                                     onClick={() => onNavigate('skills')}
-                                    className="hover:text-indigo-400 transition-colors"
+                                    className="hover:text-indigo-400 transition-colors cursor-pointer"
                                 >
                                     Skills
                                 </button>
@@ -63,7 +63,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                             <li>
                                 <button
                                     onClick={() => onNavigate('projects')}
-                                    className="hover:text-indigo-400 transition-colors"
+                                    className="hover:text-indigo-400 transition-colors cursor-pointer"
                                 >
                                     Projects
                                 </button>
@@ -71,7 +71,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                             <li>
                                 <button
                                     onClick={() => onNavigate('contact')}
-                                    className="hover:text-indigo-400 transition-colors"
+                                    className="hover:text-indigo-400 transition-colors cursor-pointer"
                                 >
                                     Contact
                                 </button>
