@@ -3,6 +3,8 @@ export interface ProfileInfo {
     role: string;
     bio: string[];
     status: 'available' | 'open to work' | 'open for collab';
+    email: string;
+    avatarUrl: string;
 }
 
 export interface SocialLink {

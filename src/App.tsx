@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import type { ProfileInfo } from './types';
 import { data } from './data/data';
 import Footer from './components/Footer';
+import Hero from './components/Hero';
 
 function App() {
     const [profile, setProfile] = useState<ProfileInfo>(data.profile);
@@ -23,7 +24,14 @@ function App() {
                 onNavigate={handleNavigate}
             />
 
-            <main className="flex-1">{/* HERO SECTION */}</main>
+            <main className="flex-1">
+                {/* HERO SECTION */}
+                <Hero
+                    profile={profile}
+                    socialLinks={data.socialLinks}
+                    onNavigate={handleNavigate}
+                />
+            </main>
 
             {/* FOOTER COMPONENT */}
             <Footer

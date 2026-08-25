@@ -1,4 +1,5 @@
 import type { ProfileInfo, SocialLink } from '../types';
+import profilePhoto from '../assets/profile-pic.jpg';
 
 export const data: {
     profile: ProfileInfo;
@@ -12,6 +13,8 @@ export const data: {
             "When I'm not writing code, you can find me exploring new open-source libraries, contributing to tech communities, or perfecting micro-interactions in Figma.",
         ],
         status: 'available',
+        email: 'rubencahyadi504@gmail.com',
+        avatarUrl: profilePhoto,
     },
     socialLinks: [
         {
