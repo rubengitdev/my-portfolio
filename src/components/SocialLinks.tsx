@@ -55,9 +55,7 @@ const SocialLinks = ({ links, variant = 'hero', email }: SocialLinksProps) => {
                                 <h4 className="text-sm font-semibold text-slate-200 group-hover:text-white transition-colors">
                                     {link.name}
                                 </h4>
-                                <p className="text-xs text-slate-400">
-                                    {link.username}
-                                </p>
+                                <p className="text-xs text-slate-400">{link.username}</p>
                             </div>
                         </div>
                         <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-indigo-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all" />
@@ -95,7 +93,7 @@ const SocialLinks = ({ links, variant = 'hero', email }: SocialLinksProps) => {
                     id="quick-copy-email-button"
                     onClick={handleCopyEmail}
                     title={copiedEmail ? 'Email Copied!' : 'Copy Email Address'}
-                    className="relative group flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/60 hover:bg-indigo-950/30 transition-all duration-200 hover:-translate-y-0.5 text-xs font-medium"
+                    className="relative group flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300 hover:text-white hover:border-indigo-500/60 hover:bg-indigo-950/30 transition-all duration-200 hover:-translate-y-0.5 text-xs font-medium cursor-pointer"
                 >
                     {copiedEmail ? (
                         <>
