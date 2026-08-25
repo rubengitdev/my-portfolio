@@ -16,3 +16,13 @@ export interface SocialLink {
     icon: string;
     primary?: boolean;
 }
+
+export type SkillCategory = 'all' | 'frontend' | 'backend' | 'tools' | 'design';
+
+export interface Skill {
+    id: string;
+    name: string;
+    category: 'frontend' | 'backend' | 'tools' | 'design';
+    icon: string;
+    description?: string;
+}
