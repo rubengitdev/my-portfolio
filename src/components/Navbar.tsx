@@ -65,10 +65,7 @@ const Navbar = ({ profile, activeSection, onNavigate }: NavbarProps) => {
                 </button>
 
                 {/* START DESKTOP NAVIGATION LINKS */}
-                <nav
-                    id="desktop-nav-links"
-                    className="hidden md:flex items-center gap-1 bg-slate-900/60 border border-slate-800/70 rounded-xl px-4 py-3 shadow-inner"
-                >
+                <nav id="desktop-nav-links" className="hidden md:flex items-center gap-1 px-4 py-3">
                     {navItems.map((item) => {
                         const isActive = activeSection === item.id;
                         return (
@@ -110,11 +107,7 @@ const Navbar = ({ profile, activeSection, onNavigate }: NavbarProps) => {
                         className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 cursor-pointer"
                         aria-label="Toggle Navigation Menu"
                     >
-                        {mobileMenuOpen ? (
-                            <X className="w-5 h-5" />
-                        ) : (
-                            <Menu className="w-5 h-5" />
-                        )}
+                        {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                     </button>
                 </div>
             </div>
