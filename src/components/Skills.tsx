@@ -53,22 +53,18 @@ const Skills = ({ skills }: SkillsProps) => {
     const filteredSkills = useMemo(() => {
         return skills.filter((skill) => {
             const matchesCategory =
-                selectedCategory === 'all' ||
-                skill.category === selectedCategory;
+                selectedCategory === 'all' || skill.category === selectedCategory;
             const matchesSearch =
                 skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 (skill.description &&
-                    skill.description
-                        .toLowerCase()
-                        .includes(searchQuery.toLowerCase()));
+                    skill.description.toLowerCase().includes(searchQuery.toLowerCase()));
             return matchesCategory && matchesSearch;
         });
     }, [skills, selectedCategory, searchQuery]);
 
     const renderIcon = (iconName: string) => {
         const iconProps = {
-            className:
-                'w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors',
+            className: 'w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors',
         };
         switch (iconName) {
             case 'Code2':
@@ -120,9 +116,8 @@ const Skills = ({ skills }: SkillsProps) => {
                         Skills & Core Technologies
                     </h2>
                     <p className="text-base text-slate-400">
-                        A comprehensive overview of the programming languages,
-                        frameworks, developer tools, and architectural patterns
-                        I use to deliver end-to-end applications.
+                        A comprehensive overview of the programming languages, frameworks, developer
+                        tools, and architectural patterns I use to deliver end-to-end applications.
                     </p>
                 </div>
 
@@ -196,7 +191,7 @@ const Skills = ({ skills }: SkillsProps) => {
                             <div
                                 key={skill.id}
                                 id={`skill-card-${skill.id}`}
-                                className="group relative p-5 rounded-2xl bg-slate-900/60 border border-slate-800/90 hover:border-indigo-500/50 hover:bg-slate-900 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1"
+                                className="group relative p-5 rounded-2xl bg-slate-900/60 border border-slate-800/90 hover:border-indigo-500/50 hover:bg-slate-900 transition-all duration-300 shadow-sm hover:shadow-xl hover:shadow-indigo-500/5 hover:-translate-y-1 cursor-pointer"
                             >
                                 {/* Top: Icon + Name */}
                                 <div className="flex items-start justify-between gap-3 mb-3">

@@ -12,23 +12,15 @@ function App() {
 
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
-            document.documentElement.style.setProperty(
-                '--cursor-x',
-                `${e.clientX}px`,
-            );
-            document.documentElement.style.setProperty(
-                '--cursor-y',
-                `${e.clientY}px`,
-            );
+            document.documentElement.style.setProperty('--cursor-x', `${e.clientX}px`);
+            document.documentElement.style.setProperty('--cursor-y', `${e.clientY}px`);
         };
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
     const handleNavigate = (sectionId: string) => {
-        document
-            .getElementById(sectionId)
-            ?.scrollIntoView({ behavior: 'smooth' });
+        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -40,11 +32,7 @@ function App() {
                 }}
             />
             {/* NAVBAR COMPONENT */}
-            <Navbar
-                profile={profile}
-                activeSection={activeSection}
-                onNavigate={handleNavigate}
-            />
+            <Navbar profile={profile} activeSection={activeSection} onNavigate={handleNavigate} />
 
             <main className="flex-1">
                 {/* HERO SECTION */}
@@ -59,11 +47,7 @@ function App() {
             </main>
 
             {/* FOOTER COMPONENT */}
-            <Footer
-                profile={profile}
-                socialLinks={data.socialLinks}
-                onNavigate={handleNavigate}
-            />
+            <Footer profile={profile} socialLinks={data.socialLinks} onNavigate={handleNavigate} />
         </div>
     );
 }

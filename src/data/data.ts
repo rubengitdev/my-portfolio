@@ -32,8 +32,7 @@ export const data: {
             name: 'Typescript',
             category: 'frontend',
             icon: 'FileCode',
-            description:
-                'Strict typing, generics, AST utilities, and enterprise scale codebases.',
+            description: 'Strict typing, generics, AST utilities, and enterprise scale codebases.',
         },
         {
             id: 'css',
