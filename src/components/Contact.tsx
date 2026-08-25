@@ -1,4 +1,4 @@
-import { MessageCircle, ArrowUpRight, Sparkles, Phone } from 'lucide-react';
+import { MessageCircle, ArrowUpRight, Phone } from 'lucide-react';
 import type { ProfileInfo } from '../types';
 
 interface ContactProps {
