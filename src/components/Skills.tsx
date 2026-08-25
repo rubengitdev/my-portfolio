@@ -101,7 +101,7 @@ const Skills = ({ skills }: SkillsProps) => {
     };
 
     return (
-        <section id="skills" className="relative pb-30">
+        <section id="skills" className="relative py-20">
             {/* Background glow */}
             <div className="absolute top-1/2 left-0 w-72 h-72 bg-indigo-600/5 blur-[100px] rounded-full pointer-events-none" />
 
