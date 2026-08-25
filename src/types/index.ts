@@ -28,3 +28,14 @@ export interface Skill {
     icon: string;
     description?: string;
 }
+
+export interface Project {
+    id: string;
+    title: string;
+    description: string;
+    category: 'open source' | 'closed source';
+    tags: string[];
+    features: string[];
+    thumbnailGifUrl: string;
+    githubUrl?: string;
+}

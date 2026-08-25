@@ -1,11 +1,13 @@
-import type { ProfileInfo, Skill, SocialLink } from '../types';
+import type { ProfileInfo, Project, Skill, SocialLink } from '../types';
 import profilePhoto from '../assets/profile-pic.jpg';
 
 export const data: {
     profile: ProfileInfo;
     skills: Skill[];
     socialLinks: SocialLink[];
+    projects: Project[];
 } = {
+    // PROFILE INFO
     profile: {
         name: 'Ruben Cahyadi',
         role: 'Front-end Developer',
@@ -20,6 +22,8 @@ export const data: {
             'https://wa.me/+62882003453869?text=Hi%20Ruben!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project.',
         whatsappNumber: '+62 (882) 0034-53869',
     },
+
+    // SKILLS
     skills: [
         // FRONTEND SKILL
         {
@@ -35,7 +39,8 @@ export const data: {
             name: 'Typescript',
             category: 'frontend',
             icon: 'FileCode',
-            description: 'Strict typing, generics, AST utilities, and enterprise scale codebases.',
+            description:
+                'Strict typing, generics, AST utilities, and enterprise scale codebases.',
         },
         {
             id: 'css',
@@ -110,6 +115,8 @@ export const data: {
                 'a cloud-based digital design and collaboration tool used to create websites, mobile apps, and user interfaces',
         },
     ],
+
+    // SOCIAL LINKS
     socialLinks: [
         {
             id: 'github',
@@ -137,6 +144,50 @@ export const data: {
             username: 'rubendiscord',
             icon: 'MessageSquare',
             primary: false,
+        },
+    ],
+
+    // PROJECTS
+    projects: [
+        {
+            id: 'project1',
+            title: 'title1',
+            description: 'description1',
+            category: 'open source',
+            tags: ['React.js', 'Typescript', 'Tailwind CSS'],
+            features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+            thumbnailGifUrl: '',
+            githubUrl: '',
+        },
+        {
+            id: 'project2',
+            title: 'title2',
+            description: 'description2',
+            category: 'open source',
+            tags: ['React.js', 'Typescript', 'Tailwind CSS'],
+            features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+            thumbnailGifUrl: '',
+            githubUrl: '',
+        },
+        {
+            id: 'project3',
+            title: 'title3',
+            description: 'description3',
+            category: 'open source',
+            tags: ['React.js', 'Typescript', 'Tailwind CSS'],
+            features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+            thumbnailGifUrl: '',
+            githubUrl: '',
+        },
+        {
+            id: 'project4',
+            title: 'title4',
+            description: 'description4',
+            category: 'open source',
+            tags: ['React.js', 'Typescript', 'Tailwind CSS'],
+            features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+            thumbnailGifUrl: '',
+            githubUrl: '',
         },
     ],
 };
