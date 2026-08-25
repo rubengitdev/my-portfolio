@@ -5,6 +5,7 @@ import { data } from './data/data';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
+import Contact from './components/Contact';
 
 function App() {
     const [profile, setProfile] = useState<ProfileInfo>(data.profile);
@@ -44,6 +45,9 @@ function App() {
 
                 {/* SKILLS SECTION */}
                 <Skills skills={data.skills} />
+
+                {/* CONTACT SECTION */}
+                <Contact profile={profile} />
             </main>
 
             {/* FOOTER COMPONENT */}

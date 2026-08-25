@@ -16,6 +16,9 @@ export const data: {
         status: 'available',
         email: 'rubencahyadi504@gmail.com',
         avatarUrl: profilePhoto,
+        whatsappUrl:
+            'https://wa.me/+62882003453869?text=Hi%20Ruben!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk%20about%20a%20project.',
+        whatsappNumber: '+62 (882) 0034-53869',
     },
     skills: [
         // FRONTEND SKILL

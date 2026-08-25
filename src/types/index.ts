@@ -5,6 +5,8 @@ export interface ProfileInfo {
     status: 'available' | 'open to work' | 'open for collab';
     email: string;
     avatarUrl: string;
+    whatsappUrl?: string;
+    whatsappNumber?: string;
 }
 
 export interface SocialLink {
