@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { ProfileInfo } from '../types';
 import { ArrowUpRight, Code2, Menu, X } from 'lucide-react';
+import Button from './Button';
 
 interface NavbarProps {
     profile: ProfileInfo;
@@ -73,7 +74,7 @@ const Navbar = ({ profile, activeSection, onNavigate }: NavbarProps) => {
                                 key={item.id}
                                 id={`nav-link-${item.id}`}
                                 onClick={() => handleMenuClick(item.id)}
-                                className={`relative px-4 py-1.5 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
+                                className={`relative px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer ${
                                     isActive
                                         ? 'text-white bg-indigo-600 shadow-sm shadow-indigo-500/30'
                                         : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
@@ -88,14 +89,14 @@ const Navbar = ({ profile, activeSection, onNavigate }: NavbarProps) => {
 
                 {/* START RIGHT CTA */}
                 <div className="hidden md:flex items-center gap-3">
-                    <button
+                    <Button
                         id="nav-cta-contact-button"
                         onClick={() => handleMenuClick('contact')}
-                        className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white text-sm font-semibold shadow-md shadow-indigo-500/20 hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                        variant="primary"
                     >
                         <span>Let's Talk</span>
                         <ArrowUpRight className="w-4 h-4" />
-                    </button>
+                    </Button>
                 </div>
                 {/* END RIGHT CTA */}
 

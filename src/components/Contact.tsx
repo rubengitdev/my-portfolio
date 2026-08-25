@@ -1,5 +1,6 @@
 import { MessageCircle, ArrowUpRight, Phone } from 'lucide-react';
 import type { ProfileInfo } from '../types';
+import Button from './Button';
 
 interface ContactProps {
     profile: ProfileInfo;
@@ -50,17 +51,16 @@ const Contact = ({ profile }: ContactProps) => {
 
                     {/* CTA Action Button */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a
+                        <Button
                             id="whatsapp-contact-cta-btn"
                             href={whatsappUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-linear-to-r from-indigo-500 via-indigo-600 to-violet-600 hover:from-indigo-600 hover:to-violet-700 text-white font-bold text-base shadow-xl shadow-indigo-600/30 hover:shadow-indigo-600/50 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 border border-indigo-400/30 group/btn cursor-pointer"
+                            variant="primary"
+                            size="lg"
                         >
                             <MessageCircle className="w-5 h-5 text-indigo-200 group-hover/btn:scale-110 transition-transform" />
                             <span>Let's Talk</span>
                             <ArrowUpRight className="w-5 h-5 text-indigo-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                        </a>
+                        </Button>
                     </div>
 
                     {/* Footer Details within Banner */}

@@ -2,6 +2,7 @@ import { ArrowDown, CheckCircle2, FileText, Send } from 'lucide-react';
 import type { ProfileInfo, SocialLink } from '../types';
 import SocialLinks from './SocialLinks';
 import { useState } from 'react';
+import Button from './Button';
 
 interface HeroProps {
     profile: ProfileInfo;
@@ -56,14 +57,15 @@ const Hero = ({ profile, socialLinks, onNavigate }: HeroProps) => {
 
                         {/* Action Buttons */}
                         <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-2">
-                            <button
+                            <Button
                                 id="hero-view-projects-button"
                                 onClick={() => onNavigate('projects')}
-                                className="px-6 py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2 cursor-pointer"
+                                variant="primary"
+                                size="lg"
                             >
                                 <span>View Projects</span>
                                 <ArrowDown className="w-4 h-4" />
-                            </button>
+                            </Button>
 
                             <button
                                 id="hero-contact-button"
@@ -74,23 +76,24 @@ const Hero = ({ profile, socialLinks, onNavigate }: HeroProps) => {
                                 <Send className="w-4 h-4 text-indigo-400" />
                             </button>
 
+                            {/* TODO: Fix download resume to use my resume instead */}
                             <button
                                 id="hero-download-cv-button"
                                 onClick={handleDownloadResume}
                                 className="px-5 py-3.5 rounded-xl bg-slate-900/50 hover:bg-slate-900 border border-slate-800/80 text-slate-300 hover:text-white text-sm font-medium transition-all duration-200 flex items-center gap-2 cursor-pointer"
-                                title="Download CV"
+                                title="Resume"
                             >
                                 {downloadedResume ? (
                                     <>
                                         <CheckCircle2 className="w-4 h-4 text-emerald-400" />
                                         <span className="text-emerald-400 font-medium">
-                                            CV Downloaded
+                                            Resume Downloaded
                                         </span>
                                     </>
                                 ) : (
                                     <>
                                         <FileText className="w-4 h-4 text-slate-400" />
-                                        <span>Download CV</span>
+                                        <span>Resume</span>
                                     </>
                                 )}
                             </button>

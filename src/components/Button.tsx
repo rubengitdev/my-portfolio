@@ -11,7 +11,7 @@ interface ButtonProps {
 }
 
 const baseStyles =
-    'inline-flex items-center justify-center gap-2 font-semibold text-sm rounded-xl transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer';
+    'inline-flex items-center justify-center gap-2 font-semibold text-sm rounded-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer';
 
 const sizeStyles = {
     sm: 'px-4 py-2 text-sm',
