@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-import type { ProfileInfo } from './types';
 import { data } from './data/data';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -8,9 +7,11 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 
 function App() {
-    const [profile, setProfile] = useState<ProfileInfo>(data.profile);
     const [activeSection, setActiveSection] = useState('hero');
 
+    const profile = data.profile;
+
+    // HANDLE CURSOR BACKGROUND GLOW
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
             document.documentElement.style.setProperty('--cursor-x', `${e.clientX}px`);
@@ -20,39 +21,67 @@ function App() {
         return () => window.removeEventListener('mousemove', handleMouseMove);
     }, []);
 
+    // HANDLE DESKTOP NAVIGATION LINK BACKGROUND COLOR
+    useEffect(() => {
+        const sections = ['hero', 'skills', 'projects', 'contact'];
+        const handleScroll = () => {
+            const scrollY = window.scrollY + 200;
+            for (let i = sections.length - 1; i >= 0; i--) {
+                const el = document.getElementById(sections[i]);
+                if (el && el.offsetTop <= scrollY) {
+                    setActiveSection(sections[i]);
+                    break;
+                }
+            }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     const handleNavigate = (sectionId: string) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
+        // START MAIN CONTAINER
         <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-indigo-600 selection:text-white">
+            {/* START HANDLE MOUSE GLOW */}
             <div
                 className="fixed inset-0 pointer-events-none z-30 transition-opacity duration-300"
                 style={{
                     background: `radial-gradient(600px at var(--cursor-x, 50%) var(--cursor-y, 50%), rgba(99,102,241,0.15), transparent 80%)`,
                 }}
             />
-            {/* NAVBAR COMPONENT */}
-            <Navbar profile={profile} activeSection={activeSection} onNavigate={handleNavigate} />
+            {/* END HANDLE MOUSE GLOW */}
 
+            {/* START NAVBAR COMPONENT */}
+            <Navbar profile={profile} activeSection={activeSection} onNavigate={handleNavigate} />
+            {/* END NAVBAR COMPONENT */}
+
+            {/* START MAIN COMPONENTS */}
             <main className="flex-1">
-                {/* HERO SECTION */}
+                {/* START HERO SECTION */}
                 <Hero
                     profile={profile}
                     socialLinks={data.socialLinks}
                     onNavigate={handleNavigate}
                 />
+                {/* END HERO SECTION */}
 
-                {/* SKILLS SECTION */}
+                {/* START SKILLS SECTION */}
                 <Skills skills={data.skills} />
+                {/* END SKILLS SECTION */}
 
-                {/* CONTACT SECTION */}
+                {/* START CONTACT SECTION */}
                 <Contact profile={profile} />
+                {/* END CONTACT SECTION */}
             </main>
+            {/* END MAIN COMPONENTS */}
 
             {/* FOOTER COMPONENT */}
             <Footer profile={profile} socialLinks={data.socialLinks} onNavigate={handleNavigate} />
         </div>
+        // END MAIN CONTAINER
     );
 }
 
