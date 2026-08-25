@@ -16,10 +16,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
     };
 
     return (
-        <footer
-            id="main-footer"
-            className="bg-slate-950 border-t border-slate-900 pt-16 pb-12"
-        >
+        <footer id="main-footer" className="bg-slate-950 border-t border-slate-900 pt-16 pb-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-900">
                     {/* Brand & Bio (6 cols) */}
@@ -33,8 +30,8 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                             </span>
                         </div>
                         <p className="text-xs sm:text-sm text-slate-400 max-w-md leading-relaxed">
-                            Engineered with React, TypeScript, and modern
-                            Tailwind CSS design principles.
+                            Engineered with React, TypeScript, and modern Tailwind CSS design
+                            principles.
                         </p>
                     </div>
 
@@ -90,7 +87,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                             <button
                                 id="footer-back-to-top"
                                 onClick={scrollToTop}
-                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-medium text-slate-300 hover:text-white transition-colors"
+                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-xs font-medium text-slate-300 hover:text-white transition-colors cursor-pointer"
                             >
                                 <span>Back to Top</span>
                                 <ArrowUp className="w-3.5 h-3.5" />
@@ -105,10 +102,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                         © {currentYear} {profile.name}. All rights reserved.
                     </p>
                     <div className="flex items-center gap-1">
-                        <span>
-                            Built with precision using React, TypeScript &
-                            Tailwind CSS
-                        </span>
+                        <span>Built with precision using React, TypeScript & Tailwind CSS</span>
                     </div>
                 </div>
             </div>
