@@ -58,7 +58,7 @@ const Projects = ({ projects, onOpenProjectModal }: ProjectsProps) => {
                                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-200 flex items-center gap-2 cursor-pointer ${
                                     selectedFilter === cat
                                         ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/30 font-semibold'
-                                        : 'bg-slate-900/80 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800'
+                                        : 'bg-slate-900/80  text-slate-400 hover:text-white hover:bg-slate-800'
                                 }`}
                             >
                                 <span>{cat}</span>
