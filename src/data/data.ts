@@ -1,5 +1,6 @@
 import type { ProfileInfo, Project, Skill, SocialLink } from '../types';
 import profilePhoto from '../assets/profile-pic.jpg';
+import taskDemo from '../assets/4Task.mp4';
 
 export const data: {
     profile: ProfileInfo;
@@ -153,15 +154,15 @@ export const data: {
             id: '4task',
             title: '4Task: Write it done, get it done',
             description:
-                '4Task is a simple tool to create your list of day to day todos',
+                '4Task is a lightweight todo app built to make daily task management simple, designed for kids.',
             category: 'open source',
             tags: ['React.js', 'Typescript', 'CSS'],
             features: [
-                'Manage TodoList',
-                'Mobile Responsive',
-                'Designed for kids',
+                'Add, edit, tick off tasks in seconds',
+                'Works great on any device screen size',
+                'Big buttons and simple design kids can use without instructions',
             ],
-            thumbnailGifUrl: '',
+            thumbnailGif: taskDemo,
             githubUrl: '',
         },
         {
@@ -177,7 +178,7 @@ export const data: {
                 'Simple and Modern Design',
                 'Custom Color Format',
             ],
-            thumbnailGifUrl: '',
+            thumbnailGif: '',
             githubUrl: '',
         },
         {
@@ -187,7 +188,7 @@ export const data: {
             category: 'closed source',
             tags: ['React.js', 'Typescript', 'Tailwind CSS'],
             features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
-            thumbnailGifUrl: '',
+            thumbnailGif: '',
             githubUrl: '',
         },
         {
@@ -197,7 +198,7 @@ export const data: {
             category: 'closed source',
             tags: ['React.js', 'Typescript', 'Tailwind CSS'],
             features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
-            thumbnailGifUrl: '',
+            thumbnailGif: '',
             githubUrl: '',
         },
     ],

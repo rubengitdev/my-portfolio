@@ -36,6 +36,6 @@ export interface Project {
     category: 'open source' | 'closed source';
     tags: string[];
     features: string[];
-    thumbnailGifUrl: string;
+    thumbnailGif: string;
     githubUrl?: string;
 }
