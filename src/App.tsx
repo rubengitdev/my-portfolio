@@ -35,7 +35,7 @@ function App() {
 
     // HANDLE DESKTOP NAVIGATION LINK BACKGROUND COLOR
     useEffect(() => {
-        const sections = ['hero', 'skills', 'projects', 'contact'];
+        const sections = ['hero', 'projects', 'skills', 'contact'];
         const handleScroll = () => {
             const scrollY = window.scrollY + 200;
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -60,6 +60,7 @@ function App() {
     };
 
     const handleNavigate = (sectionId: string) => {
+        setActiveSection(sectionId);
         document
             .getElementById(sectionId)
             ?.scrollIntoView({ behavior: 'smooth' });
@@ -101,6 +102,10 @@ function App() {
                     onOpenProjectModal={handleOpenProjectModal}
                 />
 
+                <ProjectModal
+                    project={selectedProject}
+                    onClose={handleCloseProjectModal}
+                />
                 {/* END PROJECTS COMPONENT */}
 
                 {/* START SKILLS SECTION */}
@@ -118,12 +123,6 @@ function App() {
                 profile={profile}
                 socialLinks={data.socialLinks}
                 onNavigate={handleNavigate}
-            />
-
-            {/* PROJECT PREVIEW MODAL */}
-            <ProjectModal
-                project={selectedProject}
-                onClose={handleCloseProjectModal}
             />
         </div>
         // END MAIN CONTAINER
