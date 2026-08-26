@@ -5,17 +5,29 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import Projects from './components/Projects';
+import ProjectModal from './components/ProjectModal';
+import type { Project } from './types';
 
 function App() {
     const [activeSection, setActiveSection] = useState('hero');
-
+    const [selectedProject, setSelectedProject] = useState<Project | null>(
+        null,
+    );
     const profile = data.profile;
+    const projects = data.projects;
 
     // HANDLE CURSOR BACKGROUND GLOW
     useEffect(() => {
         const handleMouseMove = (e: MouseEvent) => {
-            document.documentElement.style.setProperty('--cursor-x', `${e.clientX}px`);
-            document.documentElement.style.setProperty('--cursor-y', `${e.clientY}px`);
+            document.documentElement.style.setProperty(
+                '--cursor-x',
+                `${e.clientX}px`,
+            );
+            document.documentElement.style.setProperty(
+                '--cursor-y',
+                `${e.clientY}px`,
+            );
         };
         window.addEventListener('mousemove', handleMouseMove);
         return () => window.removeEventListener('mousemove', handleMouseMove);
@@ -38,8 +50,19 @@ function App() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    // Preview Modal
+    const handleOpenProjectModal = (project: Project) => {
+        setSelectedProject(project);
+    };
+
+    const handleCloseProjectModal = () => {
+        setSelectedProject(null);
+    };
+
     const handleNavigate = (sectionId: string) => {
-        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+        document
+            .getElementById(sectionId)
+            ?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
@@ -55,7 +78,11 @@ function App() {
             {/* END HANDLE MOUSE GLOW */}
 
             {/* START NAVBAR COMPONENT */}
-            <Navbar profile={profile} activeSection={activeSection} onNavigate={handleNavigate} />
+            <Navbar
+                profile={profile}
+                activeSection={activeSection}
+                onNavigate={handleNavigate}
+            />
             {/* END NAVBAR COMPONENT */}
 
             {/* START MAIN COMPONENTS */}
@@ -68,6 +95,14 @@ function App() {
                 />
                 {/* END HERO SECTION */}
 
+                {/* START PROJECTS COMPONENT */}
+                <Projects
+                    projects={projects}
+                    onOpenProjectModal={handleOpenProjectModal}
+                />
+
+                {/* END PROJECTS COMPONENT */}
+
                 {/* START SKILLS SECTION */}
                 <Skills skills={data.skills} />
                 {/* END SKILLS SECTION */}
@@ -79,7 +114,17 @@ function App() {
             {/* END MAIN COMPONENTS */}
 
             {/* FOOTER COMPONENT */}
-            <Footer profile={profile} socialLinks={data.socialLinks} onNavigate={handleNavigate} />
+            <Footer
+                profile={profile}
+                socialLinks={data.socialLinks}
+                onNavigate={handleNavigate}
+            />
+
+            {/* PROJECT PREVIEW MODAL */}
+            <ProjectModal
+                project={selectedProject}
+                onClose={handleCloseProjectModal}
+            />
         </div>
         // END MAIN CONTAINER
     );
