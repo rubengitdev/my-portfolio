@@ -163,7 +163,7 @@ export const data: {
                 'Big buttons and simple design kids can use without instructions',
             ],
             thumbnailGif: taskDemo,
-            githubUrl: '',
+            githubUrl: 'https://github.com/rubengitdev/4task.git',
         },
         {
             id: '4Resume',
