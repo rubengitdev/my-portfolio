@@ -21,10 +21,7 @@ const Projects = ({ projects, onOpenProjectModal }: ProjectsProps) => {
     }, [projects, selectedFilter]);
 
     return (
-        <section
-            id="projects"
-            className="py-24 relative bg-slate-950/60 border-y border-slate-900"
-        >
+        <section id="projects" className="py-24 relative bg-slate-950/60">
             <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-600/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,7 +149,7 @@ const Projects = ({ projects, onOpenProjectModal }: ProjectsProps) => {
                                         }
                                         className="flex items-center gap-1.5 text-xs font-semibold text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer"
                                     >
-                                        <span>Inspect Details</span>
+                                        <span>Details</span>
                                         <ArrowRight className="w-3.5 h-3.5" />
                                     </button>
 
