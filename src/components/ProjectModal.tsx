@@ -11,11 +11,18 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     // Close on Escape key
     useEffect(() => {
         if (!project) return;
+
+        document.body.style.overflow = 'hidden'; // ← NEW: lock scroll
+
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'Escape') onClose();
         };
         window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.body.style.overflow = ''; // ← NEW: unlock scroll
+            window.removeEventListener('keydown', handleKeyDown);
+        };
     }, [project, onClose]);
 
     // project is null → render nothing. This is the whole "is it open" logic.
@@ -44,11 +51,13 @@ const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
 
                 {/* Thumbnail */}
                 <div className="relative aspect-video w-full overflow-hidden bg-slate-950">
-                    <img
-                        src={project.thumbnailGifUrl}
-                        alt={`${project.title} Preview`}
-                        className="w-full h-full object-contain"
-                        style={{ imageRendering: 'pixelated' }}
+                    <video
+                        src={project.thumbnailGif}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="block w-full h-full object-cover"
                     />
                 </div>
 
