@@ -1,4 +1,4 @@
-import { MessageCircle, ArrowUpRight, Phone } from 'lucide-react';
+import { MessageCircle, ArrowUpRight, Phone, Mail } from 'lucide-react';
 import type { ProfileInfo } from '../types';
 import Button from './Button';
 
@@ -45,8 +45,9 @@ const Contact = ({ profile }: ContactProps) => {
 
                     {/* Subtitle */}
                     <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto mb-8 sm:mb-10 leading-relaxed">
-                        Have an exciting project, freelance idea, or want to discuss a full-time
-                        collaboration? Let's connect directly on WhatsApp!
+                        Have an exciting project, freelance idea, or want to
+                        discuss a full-time collaboration? Let's connect
+                        directly on WhatsApp!
                     </p>
 
                     {/* CTA Action Button */}
@@ -67,15 +68,27 @@ const Contact = ({ profile }: ContactProps) => {
                     <div className="mt-8 pt-8 border-t border-slate-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
                         {displayNumber && (
                             <>
-                                <span className="hidden sm:inline text-slate-600">•</span>
+                                <span className="hidden sm:inline text-slate-600">
+                                    •
+                                </span>
                                 <span className="flex items-center gap-1.5">
                                     <Phone className="w-3.5 h-3.5 text-emerald-400" />
                                     {displayNumber}
                                 </span>
                             </>
                         )}
-                        <span className="hidden sm:inline text-slate-600">•</span>
+                        <span className="hidden sm:inline text-slate-600">
+                            •
+                        </span>
                         <span>Fast Response (if I'm not asleep)</span>
+
+                        <span className="hidden sm:inline text-slate-600">
+                            •
+                        </span>
+                        <span className="flex items-center gap-1.5">
+                            <Mail className="w-3.5 h-3.5 text-emerald-400" />{' '}
+                            rubencahyadi504@gmail.com
+                        </span>
                     </div>
                 </div>
             </div>
