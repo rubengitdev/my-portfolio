@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import type { ProfileInfo } from '../types';
-import { ArrowUpRight, Code2, Menu, X } from 'lucide-react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
 import Button from './Button';
+import profilePic from '../assets/profile-pic.jpg';
 
 interface NavbarProps {
     profile: ProfileInfo;
@@ -50,7 +51,11 @@ const Navbar = ({ profile, activeSection, onNavigate }: NavbarProps) => {
                     onClick={() => handleMenuClick('hero')}
                 >
                     <div className="w-10 h-10 rounded-xl bg-linear-to-tr from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
-                        <Code2 className="w-5 h-5" />
+                        <img
+                            src={profilePic}
+                            alt={`${profile.name} profile`}
+                            className="w-full h-full object-cover rounded-lg"
+                        />
                     </div>
                     <div>
                         <span className="font-bold text-lg text-slate-100 tracking-tight block group-hover:text-indigo-400 transition-colors">
@@ -98,7 +103,7 @@ const Navbar = ({ profile, activeSection, onNavigate }: NavbarProps) => {
                         variant="primary"
                     >
                         <span>Let's Talk</span>
-                        <ArrowUpRight className="w-4 h-4" />
+                        <ArrowUpRight className="w-4 h-4 animate-bounce" />
                     </Button>
                 </div>
                 {/* END RIGHT CTA */}
