@@ -89,20 +89,20 @@ const Projects = ({ projects, onOpenProjectModal }: ProjectsProps) => {
                             <button
                                 id={`project-thumbnail-trigger-${project.id}`}
                                 onClick={() => onOpenProjectModal(project)}
-                                className="relative aspect-video w-full overflow-hidden bg-slate-950 cursor-pointer group/thumb text-left"
+                                className="relative aspect-video w-full overflow-hidden cursor-pointer group/thumb text-left"
                                 aria-label={`Open preview modal for ${project.title}`}
                             >
-                                <img
-                                    src={project.thumbnailGifUrl}
-                                    alt={`${project.title} Preview`}
-                                    className="w-full h-full object-contain group-hover/thumb:scale-105 transition-transform duration-500"
-                                    style={{ imageRendering: 'pixelated' }}
+                                <video
+                                    src={project.thumbnailGif}
+                                    autoPlay
+                                    loop
+                                    muted
+                                    playsInline
+                                    className="block w-full h-full object-cover group-hover/thumb:scale-105 transition-transform duration-500"
                                 />
 
-                                <div className="absolute inset-0 bg-slate-950/40 group-hover/thumb:bg-slate-950/60 transition-colors flex items-center justify-center" />
-
                                 <div className="absolute top-3 left-3 flex items-center gap-1.5">
-                                    <span className="px-2.5 py-1 rounded-lg bg-slate-950/85 backdrop-blur-md border border-slate-700/80 text-[11px] font-semibold text-slate-200">
+                                    <span className="px-2.5 py-1 rounded-lg bg-slate-950/85 backdrop-blur-md text-[11px] font-semibold text-slate-200">
                                         {project.category}
                                     </span>
                                 </div>
