@@ -179,7 +179,6 @@ export const data: {
                 'Fill out your resume section by section, no clutter',
                 'Formats itself to pass ATS scans automatically',
                 'Pick your own color and font to match your style',
-                'Everything on one page, no clicking through steps',
                 'Download your finished resume as PDF',
             ],
             thumbnailGif: resumeDemo,
