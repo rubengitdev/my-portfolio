@@ -135,7 +135,7 @@ const Hero = ({ profile, socialLinks, onNavigate }: HeroProps) => {
                             {/* Floating Badge 1: Tech Stack */}
                             <div className="absolute -top-4 -left-4 px-3 py-2 rounded-xl bg-slate-900/90 border border-slate-800 shadow-xl backdrop-blur-md flex items-center gap-2 animate-bounce duration-1000">
                                 <span className="text-xs font-semibold text-slate-200">
-                                    Frontend Developer
+                                    Hi there, let's connect!
                                 </span>
                             </div>
                         </div>
