@@ -1,6 +1,9 @@
 import type { ProfileInfo, Project, Skill, SocialLink } from '../types';
 import profilePhoto from '../assets/profile-pic.jpg';
-import taskDemo from '../assets/4Task.mp4';
+
+// IMPORT DEMO VIDEOS
+import taskDemo from '../assets/4TaskDemo.mp4';
+import resumeDemo from '../assets/4ResumeDemo.mp4';
 
 export const data: {
     profile: ProfileInfo;
@@ -8,7 +11,7 @@ export const data: {
     socialLinks: SocialLink[];
     projects: Project[];
 } = {
-    // PROFILE INFO
+    // PROFILE INFO DATA
     profile: {
         name: 'Ruben Cahyadi',
         role: 'Front-end Developer',
@@ -24,7 +27,7 @@ export const data: {
         whatsappNumber: '+62 (882) 0034-53869',
     },
 
-    // SKILLS
+    // SKILLS DATA
     skills: [
         // FRONTEND SKILL
         {
@@ -117,7 +120,7 @@ export const data: {
         },
     ],
 
-    // SOCIAL LINKS
+    // SOCIAL LINKS DATA
     socialLinks: [
         {
             id: 'github',
@@ -148,7 +151,7 @@ export const data: {
         },
     ],
 
-    // PROJECTS
+    // PROJECTS DATA
     projects: [
         {
             id: '4task',
@@ -167,39 +170,40 @@ export const data: {
         },
         {
             id: '4Resume',
-            title: '4Resume: ATS formatted resume builder',
+            title: '4Resume: ATS resume builder',
             description:
-                '4Resume is a tool to help you build your resume easily without worrying about ATS format',
+                '4Resume is a tool to help you build your resume easily without worrying about ATS format.',
             category: 'open source',
             tags: ['React.js', 'Javascript', 'CSS'],
             features: [
-                'Focused Form filling',
-                'Automatic ATS format',
-                'Simple and Modern Design',
-                'Custom Color Format',
+                'Fill out your resume section by section, no clutter',
+                'Formats itself to pass ATS scans automatically',
+                'Pick your own color and font to match your style',
+                'Everything on one page, no clicking through steps',
+                'Download your finished resume as PDF',
             ],
-            thumbnailGif: '',
-            githubUrl: '',
+            thumbnailGif: resumeDemo,
+            githubUrl: 'https://github.com/rubengitdev/4Resume.git',
         },
-        {
-            id: 'project3',
-            title: 'title3',
-            description: 'description3',
-            category: 'closed source',
-            tags: ['React.js', 'Typescript', 'Tailwind CSS'],
-            features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
-            thumbnailGif: '',
-            githubUrl: '',
-        },
-        {
-            id: 'project4',
-            title: 'title4',
-            description: 'description4',
-            category: 'closed source',
-            tags: ['React.js', 'Typescript', 'Tailwind CSS'],
-            features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
-            thumbnailGif: '',
-            githubUrl: '',
-        },
+        // {
+        //     id: 'project3',
+        //     title: 'title3',
+        //     description: 'description3',
+        //     category: 'closed source',
+        //     tags: ['React.js', 'Typescript', 'Tailwind CSS'],
+        //     features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+        //     thumbnailGif: '',
+        //     githubUrl: '',
+        // },
+        // {
+        //     id: 'project4',
+        //     title: 'title4',
+        //     description: 'description4',
+        //     category: 'closed source',
+        //     tags: ['React.js', 'Typescript', 'Tailwind CSS'],
+        //     features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
+        //     thumbnailGif: '',
+        //     githubUrl: '',
+        // },
     ],
 };
