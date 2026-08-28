@@ -60,7 +60,7 @@ const Contact = ({ profile }: ContactProps) => {
                         >
                             <MessageCircle className="w-5 h-5 text-indigo-200 group-hover/btn:scale-110 transition-transform" />
                             <span>Let's Talk</span>
-                            <ArrowUpRight className="w-5 h-5 text-indigo-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                            <ArrowUpRight className="w-5 h-5 text-indigo-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform animate-bounce" />
                         </Button>
                     </div>
 

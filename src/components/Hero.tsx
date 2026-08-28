@@ -64,7 +64,7 @@ const Hero = ({ profile, socialLinks, onNavigate }: HeroProps) => {
                                 size="lg"
                             >
                                 <span>View Projects</span>
-                                <ArrowDown className="w-4 h-4" />
+                                <ArrowDown className="w-4 h-4 animate-bounce" />
                             </Button>
 
                             <button
