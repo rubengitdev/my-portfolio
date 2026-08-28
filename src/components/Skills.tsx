@@ -53,18 +53,22 @@ const Skills = ({ skills }: SkillsProps) => {
     const filteredSkills = useMemo(() => {
         return skills.filter((skill) => {
             const matchesCategory =
-                selectedCategory === 'all' || skill.category === selectedCategory;
+                selectedCategory === 'all' ||
+                skill.category === selectedCategory;
             const matchesSearch =
                 skill.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 (skill.description &&
-                    skill.description.toLowerCase().includes(searchQuery.toLowerCase()));
+                    skill.description
+                        .toLowerCase()
+                        .includes(searchQuery.toLowerCase()));
             return matchesCategory && matchesSearch;
         });
     }, [skills, selectedCategory, searchQuery]);
 
     const renderIcon = (iconName: string) => {
         const iconProps = {
-            className: 'w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors',
+            className:
+                'w-5 h-5 text-indigo-400 group-hover:text-indigo-300 transition-colors',
         };
         switch (iconName) {
             case 'Code2':
@@ -116,8 +120,9 @@ const Skills = ({ skills }: SkillsProps) => {
                         Skills & Core Technologies
                     </h2>
                     <p className="text-base text-slate-400">
-                        A comprehensive overview of the programming languages, frameworks, developer
-                        tools, and architectural patterns I use to deliver end-to-end applications.
+                        A comprehensive overview of the programming languages,
+                        frameworks, developer tools, and architectural patterns
+                        I use to deliver end-to-end applications.
                     </p>
                 </div>
 
@@ -152,7 +157,7 @@ const Skills = ({ skills }: SkillsProps) => {
                             type="text"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search skill (e.g., React, Node)..."
+                            placeholder="Search skill..."
                             className="w-full pl-9 pr-4 py-2 bg-slate-900/80 border border-slate-800 focus:border-indigo-500 rounded-xl text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
                         />
                         {searchQuery && (
