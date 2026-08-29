@@ -1,4 +1,4 @@
-import { ArrowUp, Code2 } from 'lucide-react';
+import { ArrowUp, Globe } from 'lucide-react';
 import type { ProfileInfo, SocialLink } from '../types';
 import SocialLinks from './SocialLinks';
 
@@ -26,7 +26,7 @@ const Footer = ({ profile, socialLinks, onNavigate }: FooterProps) => {
                     <div className="md:col-span-6 space-y-4 flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-3">
                             <div className="w-9 h-9 rounded-xl bg-linear-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center text-white shadow-md">
-                                <Code2 className="w-5 h-5" />
+                                <Globe className="w-6 h-6" />
                             </div>
                             <span className="font-bold text-lg text-white tracking-tight">
                                 {profile.name}
