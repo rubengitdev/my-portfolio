@@ -30,6 +30,7 @@ const Navbar = ({ profile, activeSection, onNavigate }: NavbarProps) => {
     const navItems = [
         { id: 'hero', label: 'About' },
         { id: 'projects', label: 'Projects' },
+        { id: 'certifications', label: 'Certificate' },
         { id: 'skills', label: 'Skills' },
         { id: 'contact', label: 'Contact' },
     ];

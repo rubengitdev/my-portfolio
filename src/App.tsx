@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import ProjectModal from './components/ProjectModal';
 import type { Project } from './types';
+import Certifications from './components/Certifications';
 
 function App() {
     const [activeSection, setActiveSection] = useState('hero');
@@ -16,6 +17,7 @@ function App() {
     );
     const profile = data.profile;
     const projects = data.projects;
+    const certifications = data.certifications;
 
     // HANDLE CURSOR BACKGROUND GLOW
     useEffect(() => {
@@ -35,7 +37,13 @@ function App() {
 
     // HANDLE DESKTOP NAVIGATION LINK BACKGROUND COLOR
     useEffect(() => {
-        const sections = ['hero', 'projects', 'skills', 'contact'];
+        const sections = [
+            'hero',
+            'projects',
+            'certifications',
+            'skills',
+            'contact',
+        ];
         const handleScroll = () => {
             const scrollY = window.scrollY + 200;
             for (let i = sections.length - 1; i >= 0; i--) {
@@ -107,6 +115,10 @@ function App() {
                     onClose={handleCloseProjectModal}
                 />
                 {/* END PROJECTS COMPONENT */}
+
+                {/* START CERTIFICATIONS COMPONENTS */}
+                <Certifications certifications={certifications} />
+                {/* END CERTIFICATIONS COMPONENTS */}
 
                 {/* START SKILLS SECTION */}
                 <Skills skills={data.skills} />
