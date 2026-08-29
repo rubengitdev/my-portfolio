@@ -39,3 +39,11 @@ export interface Project {
     thumbnailGif: string;
     githubUrl?: string;
 }
+
+export interface Certification {
+    id: string;
+    title: string;
+    description: string;
+    thumbnail: string;
+    certificationUrl?: string;
+}

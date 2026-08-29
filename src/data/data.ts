@@ -1,15 +1,28 @@
-import type { ProfileInfo, Project, Skill, SocialLink } from '../types';
+import type {
+    Certification,
+    ProfileInfo,
+    Project,
+    Skill,
+    SocialLink,
+} from '../types';
 import profilePhoto from '../assets/profile-pic.jpg';
 
 // IMPORT DEMO VIDEOS
 import taskDemo from '../assets/4TaskDemo.mp4';
 import resumeDemo from '../assets/4ResumeDemo.mp4';
 
+// IMPORT CERTIFICATIONS
+import legacyResponsiveWebDesign from '../assets/Certifications/legacy-responsive-web-design-certificate-freecodecamp.png';
+import responsiveWebDesign from '../assets/Certifications/responsive-web-design-certificate-freecodecamp.png';
+import frontendDevelopmentLibrary from '../assets/Certifications/front-end-development-libraries-certificate-freecodecamp.png';
+import javascript from '../assets/Certifications/javascript-certifate-freecodecamp.png';
+
 export const data: {
     profile: ProfileInfo;
     skills: Skill[];
     socialLinks: SocialLink[];
     projects: Project[];
+    certifications: Certification[];
 } = {
     // PROFILE INFO DATA
     profile: {
@@ -204,5 +217,44 @@ export const data: {
         //     thumbnailGif: '',
         //     githubUrl: '',
         // },
+    ],
+
+    certifications: [
+        {
+            id: 'LegacyResponsiveWebDesign',
+            title: 'Legacy Responsive Web Design Certificate',
+            description:
+                'Representing approximately 300 hours of Responsive Web Design projects work.',
+            thumbnail: legacyResponsiveWebDesign,
+            certificationUrl:
+                'https://www.freecodecamp.org/certification/rubencahyadicamp/responsive-web-design',
+        },
+        {
+            id: 'ResponsiveWebDesign',
+            title: 'Responsive Web Design Certificate',
+            description:
+                'Representing approximately 300 hours of Responsive Web Design related work.',
+            thumbnail: responsiveWebDesign,
+            certificationUrl:
+                'https://www.freecodecamp.org/certification/rubencahyadicamp/responsive-web-design-v9',
+        },
+        {
+            id: 'frontendDevelopmentLibrary',
+            title: 'Frontend Development Library Certificate',
+            description:
+                'Representing approximately 300 hours of Front-End Development Libraries (React.js & Next.js) related work.',
+            thumbnail: frontendDevelopmentLibrary,
+            certificationUrl:
+                'https://www.freecodecamp.org/certification/rubencahyadicamp/front-end-development-libraries-v9',
+        },
+        {
+            id: 'javascript',
+            title: 'JavaScript Certificate',
+            description:
+                'Representing approximately 300 hours of JavaScript related work',
+            thumbnail: javascript,
+            certificationUrl:
+                'https://www.freecodecamp.org/certification/rubencahyadicamp/javascript-v9',
+        },
     ],
 };
