@@ -13,6 +13,7 @@ import resumeDemo from '../assets/4ResumeDemo.mp4';
 import portfolioWebsiteDemo from '../assets/PortfolioWebsiteDemo.mp4';
 import otpGeneratorDemo from '../assets/OtpGeneratorDemo.mp4';
 import tictactoeDemo from '../assets/TictactoeDemo.mp4';
+import movieSearchEngine from '../assets/MovieSearchEngineDemo.mp4';
 
 // IMPORT CERTIFICATIONS
 import legacyResponsiveWebDesign from '../assets/Certifications/legacy-responsive-web-design-certificate-freecodecamp.png';
@@ -216,11 +217,26 @@ export const data: {
             githubUrl: 'https://github.com/rubengitdev/my-portfolio.git',
         },
         {
+            id: 'movie_search_engine',
+            title: 'Movie Search Engine',
+            description: 'Search and save your favorite movie in seconds',
+            category: 'open source',
+            tags: ['React.js', 'HTML', 'JavaScript', 'CSS', 'RestAPI'],
+            features: [
+                'Real-time movie search, fetches live data from a public movie API as you type',
+                'Mark and save movies you like, stored for later viewing',
+                'clean UI showcasing search results with movie posters and details',
+            ],
+            thumbnailGif: movieSearchEngine,
+            githubUrl: 'https://github.com/rubengitdev/movie-search-engine.git',
+        },
+
+        {
             id: 'otp_generator',
             title: 'OTP Generator',
             description: 'Simple OTP generator with React hooks',
             category: 'open source',
-            tags: ['React.js', 'JavaScript', 'CSS'],
+            tags: ['React.js', 'HTML', 'JavaScript', 'CSS'],
             features: [
                 'React Hook implementation (useState & useEffect)',
                 'Simple Design using CSS',
@@ -234,7 +250,7 @@ export const data: {
             title: 'Tic Tac Toe Game',
             description: 'Fun and Interactive Tic Tac Toe Game',
             category: 'open source',
-            tags: ['React.js', 'JavaScript', 'CSS'],
+            tags: ['React.js', 'HTML', 'JavaScript', 'CSS'],
             features: [
                 'Classic 2-player gameplay, take turns as X and O on a 3x3 grid',
                 'Win detection, automatically checks rows, columns, and diagonals for a winner',
