@@ -11,6 +11,7 @@ import profilePhoto from '../assets/profile-pic.jpg';
 import taskDemo from '../assets/4TaskDemo.mp4';
 import resumeDemo from '../assets/4ResumeDemo.mp4';
 import portfolioWebsiteDemo from '../assets/PortfolioWebsiteDemo.mp4';
+import otpGeneratorDemo from '../assets/otp-generator-demo.mp4';
 
 // IMPORT CERTIFICATIONS
 import legacyResponsiveWebDesign from '../assets/Certifications/legacy-responsive-web-design-certificate-freecodecamp.png';
@@ -213,16 +214,20 @@ export const data: {
             thumbnailGif: portfolioWebsiteDemo,
             githubUrl: 'https://github.com/rubengitdev/my-portfolio.git',
         },
-        // {
-        //     id: 'project4',
-        //     title: 'title4',
-        //     description: 'description4',
-        //     category: 'closed source',
-        //     tags: ['React.js', 'Typescript', 'Tailwind CSS'],
-        //     features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
-        //     thumbnailGif: '',
-        //     githubUrl: '',
-        // },
+        {
+            id: 'otp_generator',
+            title: 'OTP Generator',
+            description: 'Simple OTP generator with React hooks',
+            category: 'open source',
+            tags: ['React.js', 'JavaScript', 'CSS'],
+            features: [
+                'React Hook implementation (useState & useEffect)',
+                'Simple Design using CSS',
+            ],
+            thumbnailGif: otpGeneratorDemo,
+            githubUrl:
+                'https://github.com/rubengitdev/p-react-one-time-password-generator.git',
+        },
     ],
 
     certifications: [
