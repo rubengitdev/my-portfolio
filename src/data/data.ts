@@ -176,7 +176,7 @@ export const data: {
             description:
                 '4Task is a lightweight todo app built to make daily task management simple, designed for kids.',
             category: 'open source',
-            tags: ['React.js', 'Typescript', 'CSS'],
+            tags: ['React.js', 'HTML', 'Typescript', 'CSS'],
             features: [
                 'Add, edit, tick off tasks in seconds',
                 'Works great on any device screen size',
@@ -191,7 +191,7 @@ export const data: {
             description:
                 '4Resume is a tool to help you build your resume easily without worrying about ATS format.',
             category: 'open source',
-            tags: ['React.js', 'Javascript', 'CSS'],
+            tags: ['React.js', 'HTML', 'Javascript', 'CSS'],
             features: [
                 'Fill out your resume section by section, no clutter',
                 'Formats itself to pass ATS scans automatically',
