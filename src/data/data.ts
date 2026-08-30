@@ -10,6 +10,7 @@ import profilePhoto from '../assets/profile-pic.jpg';
 // IMPORT DEMO VIDEOS
 import taskDemo from '../assets/4TaskDemo.mp4';
 import resumeDemo from '../assets/4ResumeDemo.mp4';
+import portfolioWebsiteDemo from '../assets/PortfolioWebsiteDemo.mp4';
 
 // IMPORT CERTIFICATIONS
 import legacyResponsiveWebDesign from '../assets/Certifications/legacy-responsive-web-design-certificate-freecodecamp.png';
@@ -197,16 +198,21 @@ export const data: {
             thumbnailGif: resumeDemo,
             githubUrl: 'https://github.com/rubengitdev/4Resume.git',
         },
-        // {
-        //     id: 'project3',
-        //     title: 'title3',
-        //     description: 'description3',
-        //     category: 'closed source',
-        //     tags: ['React.js', 'Typescript', 'Tailwind CSS'],
-        //     features: ['Feature 1', 'Feature 2', 'Feature 3', 'Feature 4'],
-        //     thumbnailGif: '',
-        //     githubUrl: '',
-        // },
+        {
+            id: 'portfolio_website',
+            title: 'Professional Portfolio Website',
+            description:
+                'A personal site built to showcase skills, projects, and certifications. Made with React, TypeScript, and Tailwind CSS, with lucide-react icons for a clean, modern feel.',
+            category: 'open source',
+            tags: ['React.js', 'Typescript', 'Tailwind CSS', 'Lucide React'],
+            features: [
+                'Type-safe codebase, built with TypeScript for fewer bugs, easier maintenance',
+                'Responsive design, Mobile first layout using Tailwind CSS',
+                'Clean layout & navigation, organized structure, easy to browse across sections',
+            ],
+            thumbnailGif: portfolioWebsiteDemo,
+            githubUrl: 'https://github.com/rubengitdev/my-portfolio.git',
+        },
         // {
         //     id: 'project4',
         //     title: 'title4',
