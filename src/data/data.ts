@@ -11,7 +11,8 @@ import profilePhoto from '../assets/profile-pic.jpg';
 import taskDemo from '../assets/4TaskDemo.mp4';
 import resumeDemo from '../assets/4ResumeDemo.mp4';
 import portfolioWebsiteDemo from '../assets/PortfolioWebsiteDemo.mp4';
-import otpGeneratorDemo from '../assets/otp-generator-demo.mp4';
+import otpGeneratorDemo from '../assets/OtpGeneratorDemo.mp4';
+import tictactoeDemo from '../assets/TictactoeDemo.mp4';
 
 // IMPORT CERTIFICATIONS
 import legacyResponsiveWebDesign from '../assets/Certifications/legacy-responsive-web-design-certificate-freecodecamp.png';
@@ -227,6 +228,21 @@ export const data: {
             thumbnailGif: otpGeneratorDemo,
             githubUrl:
                 'https://github.com/rubengitdev/p-react-one-time-password-generator.git',
+        },
+        {
+            id: 'tictactoe',
+            title: 'Tic Tac Toe Game',
+            description: 'Fun and Interactive Tic Tac Toe Game',
+            category: 'open source',
+            tags: ['React.js', 'JavaScript', 'CSS'],
+            features: [
+                'Classic 2-player gameplay, take turns as X and O on a 3x3 grid',
+                'Win detection, automatically checks rows, columns, and diagonals for a winner',
+                'Built with React, component-based structure with JavaScript and CSS',
+            ],
+            thumbnailGif: tictactoeDemo,
+            githubUrl:
+                'https://github.com/rubengitdev/p-react-tic-tac-toe-app.git',
         },
     ],
 
